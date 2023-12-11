@@ -42,5 +42,9 @@
 
 `python main.py 10 100 True`
 
+## To do
+1. Implement additional selection rules
+2. Implement additional crossover and mutation strategies
+
 ## Installation
 `pip install requirements.txt`
