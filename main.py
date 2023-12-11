@@ -8,12 +8,13 @@ if __name__ == "__main__":
               "num_of_generations[int], show_map[bool]")
         sys.exit(1)
 
-    # Extract command-line arguments
+    # Extract command-line got
     num_of_cities = int(sys.argv[1])
     num_of_generations = int(sys.argv[2])
     if sys.argv[3] == 'True':
         show_map = True
     else:
         show_map = False
+    # run app
     app = App(num_of_cities, num_of_generations, show_map)
     app.run_app()
