@@ -26,19 +26,19 @@ class CitiesMap:
         order = np.insert(order, 0, 0)
         order = np.append(order, 0)
 
-        plt.figure(figsize=(150, 150))
+        fig, ax = plt.subplots(figsize=(10, 10))
 
         # plot cites and lines between them
-        plt.plot([self.cities_coors[int(i)][0] for i in order], [self.cities_coors[int(i)][1] for i in order],
+        ax.plot([self.cities_coors[int(i)][0] for i in order], [self.cities_coors[int(i)][1] for i in order],
                  linestyle='-', marker='.')
 
         # highlight city 0
-        plt.plot(self.cities_coors[int(0)][0], self.cities_coors[int(0)][1], linestyle='-', marker='X', color='red',
+        ax.plot(self.cities_coors[int(0)][0], self.cities_coors[int(0)][1], linestyle='-', marker='X', color='red',
                  label='Start')
-        plt.legend()
-        plt.grid(visible=True, which='both')
+        ax.legend()
+        ax.grid(visible=True, which='both')
         plt.title('Route')
-        plt.show()
+        plt.savefig('map.jpg')
 
     # calculate Euclidean distance between cities: num_of_cities x num_of_cities
     # there are redundant connections, but it is easier to represent this way
