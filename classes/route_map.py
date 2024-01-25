@@ -12,14 +12,6 @@ class CitiesMap:
             self.list_of_cities.append(City())
         self.cities_coors = np.array([city.coor for city in self.list_of_cities])
 
-    # plot coordinates of cities
-    def plot_map(self):
-        plt.figure(150, 150)
-        plt.plot(self.cities_coors[:, 0], self.cities_coors[:, 1])
-        plt.grid(visible=True, which='both')
-        plt.title('Map of cities')
-        plt.show()
-
     # plot coordinates of cities with optimal route
     def plot_route(self, order):
         # add city 0 to the order of cities at the beginning and end
