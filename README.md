@@ -36,7 +36,7 @@
 
 - num_of_cities: Specify the number of cities on the map as an integer.
 - num_of_generations: Specify the number of algorithm generations as integer
- - show_map: Specify whether to show the map of cities with route between them as True/False
+ - show_map: Specify whether to plot the map and save it to jpg file
 
 2. Example:
 
